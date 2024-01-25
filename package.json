@@ -1,0 +1,12 @@
+{
+  "name": "simple-nodejs-htmp-request",
+  "version": "1.0.0",
+  "description": "Sebuah simulasi sederhana page html menggunakan node js",
+  "main": "index.js",
+  "type":"module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
