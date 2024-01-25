@@ -8,5 +8,3 @@ const input = readlinePromises.createInterface({
     output:process.stdout
 })
 
-let testing = await input.question("Testing : ");
-console.log(testing);
