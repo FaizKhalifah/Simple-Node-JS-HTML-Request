@@ -17,8 +17,30 @@ const server = http.createServer((req,res)=>{
     res.write(data);
     res.end(data);
     }
-    panggil();
     
+    
+    async function routing(){
+        res.setHeader('Content-Type', 'text/html');
+        let path = './Pages/';
+        if(req.url=='/'){
+            path+='main.html';
+            res.statusCode=200;
+        }else if(req.url=='/about'){
+            path+='about.html';
+            res.statusCode=200;
+        }else if(req.url=='/contact'){
+            path+='contact.html';
+            res.statusCode=200;
+        }else{
+            path+='404.html';
+            res.statusCode=404;
+        }
+
+        let data = await fsPromises.readFile(path);
+        res.end(data);
+    }
+
+    routing();
     
 })
 
